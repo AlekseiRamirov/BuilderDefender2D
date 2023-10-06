@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://chtxsfuk41xfs"]
+[gd_scene load_steps=5 format=3 uid="uid://chtxsfuk41xfs"]
 
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_manager.gd" id="1_a0yf3"]
 [ext_resource type="PackedScene" uid="uid://dc6k5om0by8g8" path="res://BuilderDefender2D/Scenes/mouse_selector.tscn" id="1_ooaug"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/input_manager.gd" id="4_5y7fm"]
+[ext_resource type="PackedScene" uid="uid://bbtvnecebn043" path="res://BuilderDefender2D/Scenes/hud/ui_hud.tscn" id="4_t2nkw"]
 
 [node name="Main" type="Node2D"]
 
@@ -19,3 +20,14 @@ mouseSelector = NodePath("../MouseSelector")
 [node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager")]
 script = ExtResource("4_5y7fm")
 buildingManager = NodePath("../BuildingManager")
+
+[node name="HUD" parent="." instance=ExtResource("4_t2nkw")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 344.0
+offset_top = -312.0
+offset_right = 344.0
+offset_bottom = -312.0
+grow_horizontal = 1
+grow_vertical = 1

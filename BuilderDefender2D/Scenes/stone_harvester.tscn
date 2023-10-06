@@ -14,7 +14,7 @@ resourceType = ExtResource("3_2w6kd")
 [node name="StoneHarvester" type="Node2D"]
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_3csue")
 
 [node name="ResourceGenerator" type="Node" parent="."]

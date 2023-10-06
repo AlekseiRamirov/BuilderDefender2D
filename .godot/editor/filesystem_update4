@@ -1,7 +1,0 @@
-res://BuilderDefender2D/Scenes/main.tscn
-res://BuilderDefender2D/Scripts/building_manager.gd
-res://BuilderDefender2D/Scripts/input_manager.gd
-res://BuilderDefender2D/Scenes/stone_harvester.tscn
-res://BuilderDefender2D/Scenes/wood_harvester.tscn
-res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres
-res://BuilderDefender2D/Resources/BuildingTypesData/ListBuildings.tres

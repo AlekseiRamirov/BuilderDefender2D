@@ -1,4 +1,0 @@
-BuildingType
-BuildingTypeList
-ResourceGeneratorData
-Resource

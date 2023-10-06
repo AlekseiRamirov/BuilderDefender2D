@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcs7cbgb851yl"]
+
+[ext_resource type="Texture2D" uid="uid://pdltabvi3ufx" path="res://BuilderDefender2D/Textures/StoneHarvester.png" id="1_u11ps"]
+
+[node name="ResourceTemplate" type="HBoxContainer"]
+
+[node name="ResourceImage" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_u11ps")
+expand_mode = 2
+
+[node name="ResourceLabel" type="Label" parent="."]
+layout_mode = 2
+text = "x 5
+"
