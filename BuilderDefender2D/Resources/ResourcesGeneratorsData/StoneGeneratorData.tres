@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGeneratorData" load_steps=3 format=3 uid="uid://coi8fcuqn5v5b"]
+
+[ext_resource type="Resource" uid="uid://c6rgamgvydhe2" path="res://BuilderDefender2D/Resources/ResourcesTypes/StoneData.tres" id="1_ik02f"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="2_jtelk"]
+
+[resource]
+script = ExtResource("2_jtelk")
+totalTimeTimer = 1.0
+waitTimeTimer = 1.0
+resourceType = ExtResource("1_ik02f")

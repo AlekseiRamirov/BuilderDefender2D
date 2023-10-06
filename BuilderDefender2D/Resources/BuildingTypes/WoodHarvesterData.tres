@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BuildingType" load_steps=4 format=3 uid="uid://dly4niuwos3jh"]
+
+[ext_resource type="Resource" uid="uid://bcrf82k7s8l2o" path="res://BuilderDefender2D/Resources/ResourcesGeneratorsData/WoodGeneratorData.tres" id="1_6hg3a"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type.gd" id="2_3awkn"]
+[ext_resource type="PackedScene" uid="uid://5chh21vu7orn" path="res://BuilderDefender2D/Scenes/wood_harvester.tscn" id="2_7jjas"]
+
+[resource]
+script = ExtResource("2_3awkn")
+nameBuilding = "WoodHarvester"
+scene = ExtResource("2_7jjas")
+resourceGeneratorData = ExtResource("1_6hg3a")
+countResources = 0.0
+description = ""

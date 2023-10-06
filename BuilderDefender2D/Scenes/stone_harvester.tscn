@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwdcmblr3vetm"]
+
+[ext_resource type="Texture2D" uid="uid://pdltabvi3ufx" path="res://BuilderDefender2D/Textures/StoneHarvester.png" id="1_3csue"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_generator.gd" id="2_ewqdh"]
+[ext_resource type="Resource" uid="uid://coi8fcuqn5v5b" path="res://BuilderDefender2D/Resources/ResourcesGeneratorsData/StoneGeneratorData.tres" id="3_3vxvo"]
+
+[node name="StoneHarvester" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_3csue")
+
+[node name="ResourceGenerator" type="Node" parent="."]
+script = ExtResource("2_ewqdh")
+resourceGeneratorData = ExtResource("3_3vxvo")
+
+[node name="Timer" type="Timer" parent="ResourceGenerator"]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="ResourceGenerator/Timer" to="ResourceGenerator" method="_on_timer_timeout"]

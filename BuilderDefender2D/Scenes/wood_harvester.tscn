@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://5chh21vu7orn"]
+
+[ext_resource type="Texture2D" uid="uid://dnienewtdgsyp" path="res://BuilderDefender2D/Textures/WoodHarvester.png" id="1_k81tv"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_generator.gd" id="2_dditp"]
+[ext_resource type="Resource" uid="uid://bcrf82k7s8l2o" path="res://BuilderDefender2D/Resources/ResourcesGeneratorsData/WoodGeneratorData.tres" id="3_50ihj"]
+
+[node name="WoodHarvester" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_k81tv")
+
+[node name="ResourceGenerator" type="Node" parent="."]
+script = ExtResource("2_dditp")
+resourceGeneratorData = ExtResource("3_50ihj")
+
+[node name="Timer" type="Timer" parent="ResourceGenerator"]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="ResourceGenerator/Timer" to="ResourceGenerator" method="_on_timer_timeout"]

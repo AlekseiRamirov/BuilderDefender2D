@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceType" load_steps=2 format=3 uid="uid://ctx4vgx7f0g51"]
+
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_type.gd" id="1_qhjl0"]
+
+[resource]
+script = ExtResource("1_qhjl0")
+nameResource = "Gold"

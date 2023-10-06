@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://chtxsfuk41xfs"]
+
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_manager.gd" id="1_a0yf3"]
+[ext_resource type="PackedScene" uid="uid://dc6k5om0by8g8" path="res://BuilderDefender2D/Scenes/mouse_selector.tscn" id="1_ooaug"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/input_manager.gd" id="4_5y7fm"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="MouseSelector" parent="." instance=ExtResource("1_ooaug")]
+
+[node name="BuildingManager" type="Node" parent="." node_paths=PackedStringArray("camera", "mouseSelector")]
+script = ExtResource("1_a0yf3")
+camera = NodePath("../Camera2D")
+mouseSelector = NodePath("../MouseSelector")
+
+[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager")]
+script = ExtResource("4_5y7fm")
+buildingManager = NodePath("../BuildingManager")

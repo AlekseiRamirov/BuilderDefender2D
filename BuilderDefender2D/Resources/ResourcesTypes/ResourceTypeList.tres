@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceTypeList" load_steps=5 format=3 uid="uid://djdic8ltaxlwa"]
+
+[ext_resource type="Resource" uid="uid://cou0t48i1nbxj" path="res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres" id="1_xdd1q"]
+[ext_resource type="Resource" uid="uid://c6rgamgvydhe2" path="res://BuilderDefender2D/Resources/ResourcesTypes/StoneData.tres" id="2_82y7g"]
+[ext_resource type="Resource" uid="uid://ctx4vgx7f0g51" path="res://BuilderDefender2D/Resources/ResourcesTypes/GoldData.tres" id="3_setfd"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_type_list.gd" id="4_a5aod"]
+
+[resource]
+script = ExtResource("4_a5aod")
+list = Array[Resource("res://BuilderDefender2D/Scripts/resource_type.gd")]([ExtResource("1_xdd1q"), ExtResource("2_82y7g"), ExtResource("3_setfd")])

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceType" load_steps=2 format=3 uid="uid://cou0t48i1nbxj"]
+
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_type.gd" id="1_nlbef"]
+
+[resource]
+script = ExtResource("1_nlbef")
+nameResource = "Wood"
