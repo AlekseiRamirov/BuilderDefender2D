@@ -1,1 +1,4 @@
+BuildingType
+BuildingTypeList
+ResourceGeneratorData
 Resource

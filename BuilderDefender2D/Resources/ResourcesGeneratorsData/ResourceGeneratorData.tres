@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ResourceGeneratorData" load_steps=2 format=3 uid="uid://c4weng57vir7s"]
+
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="1_bhkhy"]
+
+[resource]
+script = ExtResource("1_bhkhy")
+totalTimeTimer = 0.0
+waitTimeTimer = 0.0

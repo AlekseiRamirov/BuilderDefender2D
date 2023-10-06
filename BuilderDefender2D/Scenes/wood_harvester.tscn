@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://5chh21vu7orn"]
+[gd_scene load_steps=6 format=3 uid="uid://5chh21vu7orn"]
 
 [ext_resource type="Texture2D" uid="uid://dnienewtdgsyp" path="res://BuilderDefender2D/Textures/WoodHarvester.png" id="1_k81tv"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_generator.gd" id="2_dditp"]
-[ext_resource type="Resource" uid="uid://bcrf82k7s8l2o" path="res://BuilderDefender2D/Resources/ResourcesGeneratorsData/WoodGeneratorData.tres" id="3_50ihj"]
+[ext_resource type="Resource" uid="uid://cou0t48i1nbxj" path="res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres" id="3_xfvvb"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="4_uq32q"]
+
+[sub_resource type="Resource" id="Resource_ap87u"]
+script = ExtResource("4_uq32q")
+totalTimeTimer = 0.5
+waitTimeTimer = 0.5
+resourceType = ExtResource("3_xfvvb")
 
 [node name="WoodHarvester" type="Node2D"]
 
@@ -12,7 +19,7 @@ texture = ExtResource("1_k81tv")
 
 [node name="ResourceGenerator" type="Node" parent="."]
 script = ExtResource("2_dditp")
-resourceGeneratorData = ExtResource("3_50ihj")
+resourceGeneratorData = SubResource("Resource_ap87u")
 
 [node name="Timer" type="Timer" parent="ResourceGenerator"]
 unique_name_in_owner = true

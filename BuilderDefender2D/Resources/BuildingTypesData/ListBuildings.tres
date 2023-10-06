@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="BuildingTypeList" load_steps=11 format=3 uid="uid://dfa15qaqlrtgj"]
+
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type_list.gd" id="1_lkm3k"]
+[ext_resource type="Resource" uid="uid://cou0t48i1nbxj" path="res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres" id="1_qwxqe"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="2_tcskr"]
+[ext_resource type="PackedScene" uid="uid://5chh21vu7orn" path="res://BuilderDefender2D/Scenes/wood_harvester.tscn" id="3_rgi2f"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type.gd" id="4_pbjup"]
+[ext_resource type="PackedScene" uid="uid://cwdcmblr3vetm" path="res://BuilderDefender2D/Scenes/stone_harvester.tscn" id="5_1tjwn"]
+
+[sub_resource type="Resource" id="Resource_d2v2i"]
+script = ExtResource("2_tcskr")
+totalTimeTimer = 0.5
+waitTimeTimer = 0.5
+resourceType = ExtResource("1_qwxqe")
+
+[sub_resource type="Resource" id="Resource_c352h"]
+script = ExtResource("4_pbjup")
+nameBuilding = "Wood"
+scene = ExtResource("3_rgi2f")
+resourceGeneratorData = SubResource("Resource_d2v2i")
+countResources = 0.0
+description = ""
+
+[sub_resource type="Resource" id="Resource_6bfsi"]
+script = ExtResource("2_tcskr")
+totalTimeTimer = 1.0
+waitTimeTimer = 1.0
+
+[sub_resource type="Resource" id="Resource_o8oew"]
+script = ExtResource("4_pbjup")
+nameBuilding = "Stone"
+scene = ExtResource("5_1tjwn")
+resourceGeneratorData = SubResource("Resource_6bfsi")
+countResources = 0.0
+description = ""
+
+[resource]
+script = ExtResource("1_lkm3k")
+list = Array[ExtResource("4_pbjup")]([SubResource("Resource_c352h"), SubResource("Resource_o8oew")])

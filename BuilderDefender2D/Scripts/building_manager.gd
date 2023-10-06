@@ -3,7 +3,7 @@ class_name BuildingManager extends Node
 @export var camera: Camera2D
 @export var mouseSelector: Node2D
 var buildingType: Resource
-var buildingTypeList: Resource = load("res://BuilderDefender2D/Resources/BuildingTypes/BuildingList.tres") as BuildingTypeList
+var buildingTypeList: Resource = load("res://BuilderDefender2D/Resources/BuildingTypesData/ListBuildings.tres") as BuildingTypeList
 var pos: Vector2
 
 # Called when the node enters the scene tree for the first time.

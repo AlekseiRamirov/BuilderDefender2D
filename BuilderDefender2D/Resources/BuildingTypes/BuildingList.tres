@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="BuildingTypeList" load_steps=4 format=3 uid="uid://bb5568kwbyjqq"]
-
-[ext_resource type="Resource" uid="uid://dly4niuwos3jh" path="res://BuilderDefender2D/Resources/BuildingTypes/WoodHarvesterData.tres" id="1_yokmr"]
-[ext_resource type="Resource" uid="uid://dum8wcrjh1rej" path="res://BuilderDefender2D/Resources/BuildingTypes/StoneHarvesterData.tres" id="2_aavb4"]
-[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type_list.gd" id="3_yherd"]
-
-[resource]
-script = ExtResource("3_yherd")
-list = Array[Resource("res://BuilderDefender2D/Scripts/building_type.gd")]([ExtResource("1_yokmr"), ExtResource("2_aavb4")])
