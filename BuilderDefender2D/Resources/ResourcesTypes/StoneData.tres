@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceType" load_steps=2 format=3 uid="uid://c6rgamgvydhe2"]
+[gd_resource type="Resource" script_class="ResourceType" load_steps=3 format=3 uid="uid://c6rgamgvydhe2"]
 
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_type.gd" id="1_ulvmj"]
+[ext_resource type="Texture2D" uid="uid://g7dw8w1gkdua" path="res://BuilderDefender2D/Textures/scifiEnvironment_08.png" id="2_74mym"]
 
 [resource]
 script = ExtResource("1_ulvmj")
 nameResource = "Stone"
+spriteResource = ExtResource("2_74mym")

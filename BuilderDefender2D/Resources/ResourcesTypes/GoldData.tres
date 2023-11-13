@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceType" load_steps=2 format=3 uid="uid://ctx4vgx7f0g51"]
+[gd_resource type="Resource" script_class="ResourceType" load_steps=3 format=3 uid="uid://ctx4vgx7f0g51"]
 
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_type.gd" id="1_qhjl0"]
+[ext_resource type="Texture2D" uid="uid://dyslw22gfqfqb" path="res://BuilderDefender2D/Textures/scifiEnvironment_14.png" id="2_02jrj"]
 
 [resource]
 script = ExtResource("1_qhjl0")
 nameResource = "Gold"
+spriteResource = ExtResource("2_02jrj")

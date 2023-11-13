@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbtvnecebn043"]
+[gd_scene load_steps=3 format=3 uid="uid://bbtvnecebn043"]
 
-[ext_resource type="PackedScene" uid="uid://dcs7cbgb851yl" path="res://BuilderDefender2D/Scenes/hud/ui_resource_template.tscn" id="1_1qrvw"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_ui.gd" id="1_xd165"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkdqg"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -17,21 +19,14 @@ anchors_preset = -1
 anchor_right = 1.0
 offset_bottom = 45.0
 
+[node name="TopLeft" type="PanelContainer" parent="TopBar"]
+layout_mode = 2
+
 [node name="TopRight" type="PanelContainer" parent="TopBar"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fkdqg")
 
 [node name="ResourcesDisplayContainer" type="HBoxContainer" parent="TopBar/TopRight"]
 layout_mode = 2
-
-[node name="ResourceTemplate" parent="TopBar/TopRight/ResourcesDisplayContainer" instance=ExtResource("1_1qrvw")]
-layout_mode = 2
-
-[node name="ResourceTemplate2" parent="TopBar/TopRight/ResourcesDisplayContainer" instance=ExtResource("1_1qrvw")]
-layout_mode = 2
-
-[node name="ResourceTemplate3" parent="TopBar/TopRight/ResourcesDisplayContainer" instance=ExtResource("1_1qrvw")]
-layout_mode = 2
-
-[node name="TopLeft" type="PanelContainer" parent="TopBar"]
-layout_mode = 2
+script = ExtResource("1_xd165")

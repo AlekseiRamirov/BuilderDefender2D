@@ -1,15 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcs7cbgb851yl"]
+[gd_scene load_steps=4 format=3 uid="uid://dcs7cbgb851yl"]
 
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_ui.gd" id="1_15ind"]
 [ext_resource type="Texture2D" uid="uid://pdltabvi3ufx" path="res://BuilderDefender2D/Textures/StoneHarvester.png" id="1_u11ps"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_y780u"]
+font_size = 12
+
 [node name="ResourceTemplate" type="HBoxContainer"]
+script = ExtResource("1_15ind")
 
 [node name="ResourceImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("1_u11ps")
 expand_mode = 2
+stretch_mode = 6
 
 [node name="ResourceLabel" type="Label" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
-text = "x 5
+text = "x 0
 "
+label_settings = SubResource("LabelSettings_y780u")
