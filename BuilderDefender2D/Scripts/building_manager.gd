@@ -2,6 +2,7 @@ class_name BuildingManager extends Node
 
 @export var camera: Camera2D
 @export var mouseSelector: Node2D
+@export var containerBuilding: Node2D
 var buildingType: Resource
 var buildingTypeList: Resource = load("res://BuilderDefender2D/Resources/BuildingTypesData/ListBuildings.tres") as BuildingTypeList
 var pos: Vector2
@@ -25,7 +26,7 @@ func GetMouseWorldPosition2D() -> Vector2:
 func SpawnBuildingTypeScene():
 	var instance_scene: Node2D = buildingType.scene.instantiate()
 	instance_scene.position = pos
-	add_child(instance_scene)
+	containerBuilding.add_child(instance_scene)
 
 
 func SelectBuildingTypeToSpawn(inputKey: int):

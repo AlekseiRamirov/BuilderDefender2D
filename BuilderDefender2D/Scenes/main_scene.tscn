@@ -13,10 +13,13 @@
 
 [node name="WorldMap" type="Node2D" parent="."]
 
-[node name="BuildingManager" type="Node" parent="." node_paths=PackedStringArray("camera", "mouseSelector")]
+[node name="ContainerBuildings" type="Node2D" parent="WorldMap"]
+
+[node name="BuildingManager" type="Node" parent="." node_paths=PackedStringArray("camera", "mouseSelector", "containerBuilding")]
 script = ExtResource("2_fia1h")
 camera = NodePath("../Camera2D")
 mouseSelector = NodePath("../MouseSelector")
+containerBuilding = NodePath("../WorldMap/ContainerBuildings")
 
 [node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager")]
 script = ExtResource("3_3wyff")
