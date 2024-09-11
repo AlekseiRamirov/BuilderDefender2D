@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://sg8ovjybline"]
+
+[ext_resource type="PackedScene" uid="uid://dc6k5om0by8g8" path="res://BuilderDefender2D/Scenes/mouse_selector.tscn" id="1_efvcm"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_manager.gd" id="2_fia1h"]
+[ext_resource type="PackedScene" uid="uid://bbtvnecebn043" path="res://BuilderDefender2D/Scenes/hud/ui_hud.tscn" id="2_yli80"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/input_manager.gd" id="3_3wyff"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MouseSelector" parent="." instance=ExtResource("1_efvcm")]
+
+[node name="WorldMap" type="Node2D" parent="."]
+
+[node name="BuildingManager" type="Node" parent="." node_paths=PackedStringArray("camera", "mouseSelector")]
+script = ExtResource("2_fia1h")
+camera = NodePath("../Camera2D")
+mouseSelector = NodePath("../MouseSelector")
+
+[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager")]
+script = ExtResource("3_3wyff")
+buildingManager = NodePath("../BuildingManager")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("2_yli80")]
