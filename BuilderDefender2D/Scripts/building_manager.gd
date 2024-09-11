@@ -16,18 +16,26 @@ func _process(delta):
 	pos = GetMouseWorldPosition2D()
 	mouseSelector.global_position = pos
 
+
 func GetMouseWorldPosition2D() -> Vector2:
 	var mouseWorldPosition: Vector2 = camera.get_local_mouse_position()
 	return mouseWorldPosition
+
 
 func SpawnBuildingTypeScene():
 	var instance_scene: Node2D = buildingType.scene.instantiate()
 	instance_scene.position = pos
 	add_child(instance_scene)
 
+
 func SelectBuildingTypeToSpawn(inputKey: int):
+	if not inputKey:
+		print("Input key not valid")
+		return
 	match inputKey:
 		1:
 			buildingType = buildingTypeList.list[0]
 		2:
 			buildingType = buildingTypeList.list[1]
+		3:
+			buildingType = buildingTypeList.list[2]

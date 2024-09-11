@@ -1,24 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcs7cbgb851yl"]
+[gd_scene load_steps=2 format=3 uid="uid://d4c01i5k51jpo"]
 
-[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_ui.gd" id="1_15ind"]
-[ext_resource type="Texture2D" uid="uid://pdltabvi3ufx" path="res://BuilderDefender2D/Textures/StoneHarvester.png" id="1_u11ps"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_y780u"]
-font_size = 12
+[ext_resource type="Texture2D" uid="uid://cbep5fnmdiht0" path="res://BuilderDefender2D/Textures/scifiEnvironment_02.png" id="1_mxvcx"]
 
 [node name="ResourceTemplate" type="HBoxContainer"]
-script = ExtResource("1_15ind")
 
-[node name="ResourceImage" type="TextureRect" parent="."]
-unique_name_in_owner = true
+[node name="ImageResource" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1_u11ps")
-expand_mode = 2
-stretch_mode = 6
+texture = ExtResource("1_mxvcx")
+expand_mode = 3
 
-[node name="ResourceLabel" type="Label" parent="."]
-unique_name_in_owner = true
+[node name="LabelResource" type="Label" parent="."]
 layout_mode = 2
-text = "x 0
-"
-label_settings = SubResource("LabelSettings_y780u")
+text = "x 0"

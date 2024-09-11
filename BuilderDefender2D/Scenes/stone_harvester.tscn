@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwdcmblr3vetm"]
 
-[ext_resource type="Texture2D" uid="uid://pdltabvi3ufx" path="res://BuilderDefender2D/Textures/StoneHarvester.png" id="1_3csue"]
+[ext_resource type="Texture2D" uid="uid://hm70tjbp13sp" path="res://RTS Sci-fi/PNG/Retina/Structure/scifiStructure_08.png" id="1_53w1v"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_generator.gd" id="2_ewqdh"]
 [ext_resource type="Resource" uid="uid://c6rgamgvydhe2" path="res://BuilderDefender2D/Resources/ResourcesTypes/StoneData.tres" id="3_2w6kd"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="4_xblv5"]
@@ -14,8 +14,7 @@ resourceType = ExtResource("3_2w6kd")
 [node name="StoneHarvester" type="Node2D"]
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_3csue")
+texture = ExtResource("1_53w1v")
 
 [node name="ResourceGenerator" type="Node" parent="."]
 script = ExtResource("2_ewqdh")

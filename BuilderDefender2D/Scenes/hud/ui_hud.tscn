@@ -3,6 +3,10 @@
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_ui.gd" id="1_xd165"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkdqg"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -13,20 +17,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TopBar" type="HBoxContainer" parent="."]
+[node name="TopRight" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-offset_bottom = 45.0
-
-[node name="TopLeft" type="PanelContainer" parent="TopBar"]
-layout_mode = 2
-
-[node name="TopRight" type="PanelContainer" parent="TopBar"]
-layout_mode = 2
-size_flags_horizontal = 10
+offset_bottom = 64.0
+grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_fkdqg")
 
-[node name="ResourcesDisplayContainer" type="HBoxContainer" parent="TopBar/TopRight"]
+[node name="ResourcesDisplayContainer" type="HBoxContainer" parent="TopRight"]
 layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 5
 script = ExtResource("1_xd165")

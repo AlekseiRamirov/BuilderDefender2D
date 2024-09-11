@@ -20,3 +20,5 @@ func _input(event):
 			buildingManager.SelectBuildingTypeToSpawn(1)
 		if event.keycode == KEY_2 && event.pressed:
 			buildingManager.SelectBuildingTypeToSpawn(2)
+		if event.keycode == KEY_3 && event.pressed:
+			buildingManager.SelectBuildingTypeToSpawn(3)

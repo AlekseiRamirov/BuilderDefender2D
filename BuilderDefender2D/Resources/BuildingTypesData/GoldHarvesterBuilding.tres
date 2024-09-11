@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BuildingType" load_steps=6 format=3 uid="uid://erofl655k7m3"]
+
+[ext_resource type="Resource" uid="uid://ctx4vgx7f0g51" path="res://BuilderDefender2D/Resources/ResourcesTypes/GoldData.tres" id="1_umsaf"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="2_fxbh6"]
+[ext_resource type="PackedScene" uid="uid://c5owovhtxu1aq" path="res://BuilderDefender2D/Scenes/gold_harvester.tscn" id="3_v37k6"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type.gd" id="4_hb6gs"]
+
+[sub_resource type="Resource" id="Resource_iyi1u"]
+script = ExtResource("2_fxbh6")
+totalTimeTimer = 5.0
+waitTimeTimer = 5.0
+resourceType = ExtResource("1_umsaf")
+
+[resource]
+script = ExtResource("4_hb6gs")
+nameBuilding = "Gold"
+scene = ExtResource("3_v37k6")
+resourceGeneratorData = SubResource("Resource_iyi1u")
+countResources = 0.0
+description = "Genrator Gold Resource"

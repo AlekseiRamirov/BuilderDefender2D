@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://5chh21vu7orn"]
 
-[ext_resource type="Texture2D" uid="uid://dnienewtdgsyp" path="res://BuilderDefender2D/Textures/WoodHarvester.png" id="1_k81tv"]
+[ext_resource type="Texture2D" uid="uid://htsnnkhieed6" path="res://RTS Sci-fi/PNG/Retina/Structure/scifiStructure_07.png" id="1_b2g13"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resource_generator.gd" id="2_dditp"]
 [ext_resource type="Resource" uid="uid://cou0t48i1nbxj" path="res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres" id="3_xfvvb"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="4_uq32q"]
@@ -14,8 +14,7 @@ resourceType = ExtResource("3_xfvvb")
 [node name="WoodHarvester" type="Node2D"]
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_k81tv")
+texture = ExtResource("1_b2g13")
 
 [node name="ResourceGenerator" type="Node" parent="."]
 script = ExtResource("2_dditp")

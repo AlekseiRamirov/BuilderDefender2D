@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BuildingType" load_steps=6 format=3 uid="uid://c131r4fefk682"]
+
+[ext_resource type="Resource" uid="uid://c6rgamgvydhe2" path="res://BuilderDefender2D/Resources/ResourcesTypes/StoneData.tres" id="1_pjkof"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="2_b3y3b"]
+[ext_resource type="PackedScene" uid="uid://cwdcmblr3vetm" path="res://BuilderDefender2D/Scenes/stone_harvester.tscn" id="3_6nexo"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type.gd" id="4_kk51b"]
+
+[sub_resource type="Resource" id="Resource_6bfsi"]
+script = ExtResource("2_b3y3b")
+totalTimeTimer = 1.0
+waitTimeTimer = 1.0
+resourceType = ExtResource("1_pjkof")
+
+[resource]
+script = ExtResource("4_kk51b")
+nameBuilding = "Stone"
+scene = ExtResource("3_6nexo")
+resourceGeneratorData = SubResource("Resource_6bfsi")
+countResources = 0.0
+description = "Generator Stone Resource"
