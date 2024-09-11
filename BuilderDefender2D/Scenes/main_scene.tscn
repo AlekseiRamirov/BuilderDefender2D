@@ -31,7 +31,8 @@ script = ExtResource("1_wov40")
 [node name="FollowObjectCam" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="FollowObjectCam"]
-scale = Vector2(0.025, 0.025)
+visible = false
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("9_v2yg1")
 
 [node name="WorldMap" type="Node2D" parent="."]
@@ -54,20 +55,23 @@ buildingManager = NodePath("../BuildingManager")
 cameraManager = NodePath("../CameraManager")
 mouseSelector = NodePath("../MouseSelector")
 
-[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("camera")]
+[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("camera", "followObject")]
 script = ExtResource("7_ochf1")
 camera = NodePath("../Camera2D")
+followObject = NodePath("../FollowObjectCam")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="UI" instance=ExtResource("2_yli80")]
 
-[node name="PhantomCamera2D" type="Node2D" parent="."]
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 script = ExtResource("6_eyrdq")
 priority = 1
 follow_mode = 2
+follow_target = NodePath("../FollowObjectCam")
 tween_resource = SubResource("Resource_qdw7d")
 follow_damping = true
+follow_damping_value = Vector2(0.2, 0.2)
 dead_zone_height = 0.7
 show_viewfinder_in_play = true
 draw_limits = true

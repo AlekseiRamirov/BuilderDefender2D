@@ -1,10 +1,18 @@
 class_name InputManager extends Node
 
+enum ACTIONS {
+	Up,
+	Down,
+	Right,
+	Left
+}
+
 @export var buildingManager: BuildingManager
 @export var cameraManager: CameraManager
 @export var mouseSelector: Node2D
 
-var mouse_pos: Vector2
+var mouse_pos: Vector2 = Vector2.ZERO
+var move_dir: Vector2 = Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +22,17 @@ func _ready():
 func _process(delta):
 	mouse_pos = cameraManager.camera.get_local_mouse_position()
 	mouseSelector.global_position = mouse_pos
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("Down"):
+		move_dir.y += 1
+	if Input.is_action_pressed("Up"):
+		move_dir.y -= 1
+	if Input.is_action_pressed("Right"):
+		move_dir.x += 1
+	if Input.is_action_pressed("Left"):
+		move_dir.x -= 1
+	cameraManager.move_object_to_follow(move_dir, delta)
 
 
 func _input(event):
