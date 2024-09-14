@@ -55,10 +55,13 @@ buildingManager = NodePath("../BuildingManager")
 cameraManager = NodePath("../CameraManager")
 mouseSelector = NodePath("../MouseSelector")
 
-[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("camera", "followObject")]
+[node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("camera", "phantomCamera", "followObject")]
 script = ExtResource("7_ochf1")
 camera = NodePath("../Camera2D")
+phantomCamera = NodePath("../PhantomCamera2D")
 followObject = NodePath("../FollowObjectCam")
+speed_movement = 400.0
+multiplier_zoom = 8.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 
