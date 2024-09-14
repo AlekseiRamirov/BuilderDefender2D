@@ -32,10 +32,8 @@ func _physics_process(delta: float) -> void:
 
 	# Zone to zoom the camera
 	if Input.is_action_just_released("Wheel Up"):
-		print("Wheel up?")
 		cameraManager.zoom_camera(zoom_dir, delta)
 	if Input.is_action_just_released("Wheel Down"):
-		print("Wheel down?")
 		cameraManager.zoom_camera(-zoom_dir, delta)
 
 
