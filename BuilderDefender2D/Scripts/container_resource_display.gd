@@ -1,4 +1,4 @@
-class_name ResourcesUI extends Node
+class_name ContainerResourceDisplay extends Node
 
 @export var resource_template: PackedScene = preload("res://BuilderDefender2D/Scenes/hud/ui_resource_template.tscn")
 var resourceTypeList: ResourceTypeList = preload("res://BuilderDefender2D/Resources/ResourcesTypes/ResourceTypeList.tres")

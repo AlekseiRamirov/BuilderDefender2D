@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbtvnecebn043"]
+[gd_scene load_steps=5 format=3 uid="uid://bbtvnecebn043"]
 
-[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_ui.gd" id="1_xd165"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/container_resource_display.gd" id="1_xd165"]
+[ext_resource type="PackedScene" uid="uid://4uwad2uhyh7g" path="res://BuilderDefender2D/Scenes/hud/ui_building_button.tscn" id="3_nrje2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkdqg"]
 content_margin_left = 12.0
 content_margin_top = 12.0
 content_margin_right = 12.0
 content_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jt0xg"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -31,3 +34,29 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_constants/separation = 5
 script = ExtResource("1_xd165")
+
+[node name="BottomLeft" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -73.655
+offset_right = 226.0
+offset_bottom = -9.65503
+grow_vertical = 0
+pivot_offset = Vector2(0, 32)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jt0xg")
+
+[node name="ButtonsBuildingsContainer" type="HBoxContainer" parent="BottomLeft"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BuildingButton" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
+layout_mode = 2
+
+[node name="BuildingButton2" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
+layout_mode = 2
+
+[node name="BuildingButton3" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
+layout_mode = 2
