@@ -61,7 +61,7 @@ camera = NodePath("../Camera2D")
 phantomCamera = NodePath("../PhantomCamera2D")
 followObject = NodePath("../FollowObjectCam")
 speed_movement = 400.0
-multiplier_zoom = 8.0
+multiplier_zoom = 12.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 

@@ -26,6 +26,9 @@ func move_object_to_follow(in_pos: Vector2, in_delta: float) -> void:
 
 func zoom_camera(in_zoom: Vector2, in_delta) -> void:
 	camera_zoom = phantomCamera.get_zoom()
-	var calculated_zoom: Vector2 = camera_zoom + (in_zoom * multiplier_zoom * in_delta)
+	var target_zoom: Vector2 = camera_zoom
+	var calculated_zoom: Vector2 = target_zoom + in_zoom
 	var clamped_zoom: Vector2 = clamp(calculated_zoom, Vector2(0.7, 0.7), Vector2(2.0, 2.0))
-	phantomCamera.set_zoom(clamped_zoom)
+	
+	camera_zoom = lerp(camera_zoom, clamped_zoom, in_delta * multiplier_zoom)
+	phantomCamera.set_zoom(camera_zoom)
