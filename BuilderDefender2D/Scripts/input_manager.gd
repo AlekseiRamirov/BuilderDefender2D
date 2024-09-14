@@ -50,14 +50,3 @@ func _input(event):
 			buildingManager.SelectBuildingTypeToSpawn(2)
 		if event.keycode == KEY_3 && event.pressed:
 			buildingManager.SelectBuildingTypeToSpawn(3)
-	
-	#if event.is_action_pressed("Wheel Up"):
-		#print("Wheel up?")
-		#zoom_dir.x += 1
-		#zoom_dir.y += 1
-		#cameraManager.zoom_camera(zoom_dir)
-	#if event.is_action_pressed("Wheel Down"):
-		#print("Wheel down?")
-		#zoom_dir.x -= 1
-		#zoom_dir.y -= 1
-		#cameraManager.zoom_camera(zoom_dir)
