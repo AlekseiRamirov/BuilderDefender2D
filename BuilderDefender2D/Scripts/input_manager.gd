@@ -8,14 +8,16 @@ var mouse_pos: Vector2 = Vector2.ZERO
 var move_dir: Vector2 = Vector2.ZERO
 var zoom_dir: Vector2 = Vector2.ONE
 
+var resource_mouse_selector: Resource = preload("res://BuilderDefender2D/Textures/Cursor_resize.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_custom_mouse_cursor(resource_mouse_selector,Input.CURSOR_ARROW, Vector2(8, 0))
 
 
 func _process(delta):
-	mouse_pos = cameraManager.camera.get_local_mouse_position()
-	mouseSelector.global_position = mouse_pos
+	mouse_pos = cameraManager.camera.get_global_mouse_position()
+	#mouseSelector.global_position = mouse_pos
 
 
 func _physics_process(delta: float) -> void:

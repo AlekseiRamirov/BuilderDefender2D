@@ -1,6 +1,5 @@
-[gd_scene load_steps=12 format=4 uid="uid://sg8ovjybline"]
+[gd_scene load_steps=11 format=4 uid="uid://sg8ovjybline"]
 
-[ext_resource type="PackedScene" uid="uid://dc6k5om0by8g8" path="res://BuilderDefender2D/Scenes/mouse_selector.tscn" id="1_efvcm"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_wov40"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_manager.gd" id="2_fia1h"]
 [ext_resource type="PackedScene" uid="uid://bbtvnecebn043" path="res://BuilderDefender2D/Scenes/hud/ui_hud.tscn" id="2_yli80"]
@@ -26,8 +25,6 @@ editor_draw_limits = true
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("1_wov40")
 
-[node name="MouseSelector" parent="." instance=ExtResource("1_efvcm")]
-
 [node name="FollowObjectCam" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="FollowObjectCam"]
@@ -49,11 +46,10 @@ script = ExtResource("2_fia1h")
 camera = NodePath("../Camera2D")
 containerBuilding = NodePath("../WorldMap/ContainerBuildings")
 
-[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager", "cameraManager", "mouseSelector")]
+[node name="InputManager" type="Node" parent="." node_paths=PackedStringArray("buildingManager", "cameraManager")]
 script = ExtResource("3_3wyff")
 buildingManager = NodePath("../BuildingManager")
 cameraManager = NodePath("../CameraManager")
-mouseSelector = NodePath("../MouseSelector")
 
 [node name="CameraManager" type="Node" parent="." node_paths=PackedStringArray("camera", "phantomCamera", "followObject")]
 script = ExtResource("7_ochf1")
