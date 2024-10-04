@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		cameraManager.zoom_camera(-zoom_dir, delta)
 
 
-func _input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 			buildingManager.SpawnBuildingTypeScene(mouse_pos)

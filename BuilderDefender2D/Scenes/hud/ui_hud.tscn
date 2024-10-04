@@ -67,6 +67,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ftotd")
 
 [node name="ButtonsBuildingsContainer" type="HBoxContainer" parent="BottomLeft"]
 layout_mode = 2
+mouse_filter = 0
 theme_override_constants/separation = 12
 script = ExtResource("2_8amla")
 
@@ -83,5 +84,6 @@ offset_right = -80.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 0
 texture = ExtResource("3_u2rtl")
 expand_mode = 5
