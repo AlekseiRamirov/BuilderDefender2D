@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbtvnecebn043"]
+[gd_scene load_steps=6 format=3 uid="uid://bbtvnecebn043"]
 
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/container_resource_display.gd" id="1_xd165"]
-[ext_resource type="PackedScene" uid="uid://4uwad2uhyh7g" path="res://BuilderDefender2D/Scenes/hud/ui_building_button.tscn" id="3_nrje2"]
+[ext_resource type="Script" path="res://BuilderDefender2D/Scripts/container_building_button.gd" id="2_8amla"]
+[ext_resource type="Texture2D" uid="uid://b3a0o2ixt3u1a" path="res://RTS Sci-fi/PNG/Retina/Unit/scifiUnit_13.png" id="3_u2rtl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkdqg"]
 content_margin_left = 12.0
@@ -9,7 +10,20 @@ content_margin_top = 12.0
 content_margin_right = 12.0
 content_margin_bottom = 12.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jt0xg"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftotd"]
+content_margin_left = 30.0
+content_margin_right = 30.0
+bg_color = Color(0.409713, 0.589746, 0.776164, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 1
+border_color = Color(0.927787, 0.875828, 0.976113, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.635294)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -37,26 +51,37 @@ script = ExtResource("1_xd165")
 
 [node name="BottomLeft" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = -73.655
-offset_right = 226.0
-offset_bottom = -9.65503
+offset_left = -138.0
+offset_top = -80.0
+offset_right = 138.0
+offset_bottom = -14.0
+grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(0, 32)
-theme_override_styles/panel = SubResource("StyleBoxEmpty_jt0xg")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ftotd")
 
 [node name="ButtonsBuildingsContainer" type="HBoxContainer" parent="BottomLeft"]
 layout_mode = 2
 theme_override_constants/separation = 12
+script = ExtResource("2_8amla")
 
-[node name="BuildingButton" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
-layout_mode = 2
-
-[node name="BuildingButton2" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
-layout_mode = 2
-
-[node name="BuildingButton3" parent="BottomLeft/ButtonsBuildingsContainer" instance=ExtResource("3_nrje2")]
-layout_mode = 2
+[node name="ImgConstruct" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -120.0
+offset_right = -80.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_u2rtl")
+expand_mode = 5

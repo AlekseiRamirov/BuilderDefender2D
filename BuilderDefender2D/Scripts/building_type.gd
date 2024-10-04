@@ -5,3 +5,4 @@ class_name BuildingType extends Resource
 @export var resourceGeneratorData: ResourceGeneratorData
 @export var countResources: float
 @export var description: String
+@export var sprite_building: Texture2D

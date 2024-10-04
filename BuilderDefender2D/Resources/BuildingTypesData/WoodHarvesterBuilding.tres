@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="BuildingType" load_steps=6 format=3 uid="uid://bwvgysvo72rog"]
+[gd_resource type="Resource" script_class="BuildingType" load_steps=7 format=3 uid="uid://bwvgysvo72rog"]
 
 [ext_resource type="Resource" uid="uid://cou0t48i1nbxj" path="res://BuilderDefender2D/Resources/ResourcesTypes/WoodData.tres" id="1_f2hts"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/resources_generator_data.gd" id="2_d5qnv"]
 [ext_resource type="PackedScene" uid="uid://5chh21vu7orn" path="res://BuilderDefender2D/Scenes/wood_harvester.tscn" id="3_8o2fx"]
 [ext_resource type="Script" path="res://BuilderDefender2D/Scripts/building_type.gd" id="4_ol6pd"]
+[ext_resource type="Texture2D" uid="uid://htsnnkhieed6" path="res://RTS Sci-fi/PNG/Retina/Structure/scifiStructure_07.png" id="5_o45ej"]
 
 [sub_resource type="Resource" id="Resource_d2v2i"]
 script = ExtResource("2_d5qnv")
@@ -18,3 +19,4 @@ scene = ExtResource("3_8o2fx")
 resourceGeneratorData = SubResource("Resource_d2v2i")
 countResources = 0.0
 description = "Generator Wood Resource"
+sprite_building = ExtResource("5_o45ej")
